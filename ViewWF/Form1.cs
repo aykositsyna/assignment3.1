@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLogic;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace ViewWF
 {
@@ -75,7 +76,14 @@ namespace ViewWF
 
         private void SpecialityHistogram_Render()
         {
-
+            Series series = new Series(" ");
+            series.ChartType = SeriesChartType.Column;
+            Dictionary<string, int> specialities = logic.GetHistogram();
+            foreach(KeyValuePair<string, int> speciality in specialities)
+            {
+                series.Points.AddXY(speciality.Key, speciality.Value);
+            }
+            SpecialityHistogram.Series.Add(series);
         }
 
     }
