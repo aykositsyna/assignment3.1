@@ -13,15 +13,17 @@ namespace ViewWF
 {
     public partial class Form1 : Form
     {
+        Logic logic = new Logic();
         
         public Form1()
         {
-            Logic Logic = new Logic();
             InitializeComponent();
 
-            StudentsListView.Columns.Add("Students");
-            StudentsListView.Columns.Add("Speciality");
-            StudentsListView.Columns.Add("Group");
+            // StudentsListView.Columns.Add("#");
+            // StudentsListView.Columns.Add("Students");
+            // StudentsListView.Columns.Add("Speciality");
+            // StudentsListView.Columns.Add("Group");
+            Refresh();
 
         }
 
@@ -55,7 +57,20 @@ namespace ViewWF
 
         private void StudentsListView_Render()
         {
+            List<string> students = logic.GetAllStudents();
+            int i = 1;
+            foreach(string student in students)
+            {
+                string[] studentDetails = student.Split(' '); // Split each student string by spaces 0 - name; 1 - speciality; 2 - group
+                ListViewItem studentItem = new ListViewItem(i.ToString());
 
+                foreach(string detail in studentDetails)
+                {
+                    studentItem.SubItems.Add(detail);
+                }
+                StudentsListView.Items.Add(studentItem);
+                i++;
+            }
         }
 
         private void SpecialityHistogram_Render()

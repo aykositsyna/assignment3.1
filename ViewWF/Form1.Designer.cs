@@ -35,6 +35,10 @@
             this.RemoveStudentBttn = new System.Windows.Forms.Button();
             this.SpecialityHistogram = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.StudentsListView = new System.Windows.Forms.ListView();
+            this.IDColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.NameColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.SpecialityColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.GroupColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.SpecialityHistogram)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,6 +84,11 @@
             // 
             // StudentsListView
             // 
+            this.StudentsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.IDColumn,
+            this.NameColumn,
+            this.SpecialityColumn,
+            this.GroupColumn});
             this.StudentsListView.HideSelection = false;
             this.StudentsListView.Location = new System.Drawing.Point(12, 30);
             this.StudentsListView.Name = "StudentsListView";
@@ -87,6 +96,22 @@
             this.StudentsListView.TabIndex = 4;
             this.StudentsListView.UseCompatibleStateImageBehavior = false;
             this.StudentsListView.SelectedIndexChanged += new System.EventHandler(this.StudentsListView_SelectedIndexChanged);
+            // 
+            // IDColumn
+            // 
+            this.IDColumn.Text = "#";
+            // 
+            // NameColumn
+            // 
+            this.NameColumn.Text = "Name";
+            // 
+            // SpecialityColumn
+            // 
+            this.SpecialityColumn.Text = "Speciality";
+            // 
+            // GroupColumn
+            // 
+            this.GroupColumn.Text = "Group";
             // 
             // Form1
             // 
@@ -110,6 +135,10 @@
         private System.Windows.Forms.Button RemoveStudentBttn;
         private System.Windows.Forms.DataVisualization.Charting.Chart SpecialityHistogram;
         private System.Windows.Forms.ListView StudentsListView;
+        private System.Windows.Forms.ColumnHeader IDColumn;
+        private System.Windows.Forms.ColumnHeader NameColumn;
+        private System.Windows.Forms.ColumnHeader SpecialityColumn;
+        private System.Windows.Forms.ColumnHeader GroupColumn;
     }
 }
 
