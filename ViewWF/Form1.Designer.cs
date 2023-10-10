@@ -33,9 +33,9 @@
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.AddStudentBttn = new System.Windows.Forms.Button();
             this.RemoveStudentBttn = new System.Windows.Forms.Button();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.SpecialityHistogram = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.StudentsListView = new System.Windows.Forms.ListView();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SpecialityHistogram)).BeginInit();
             this.SuspendLayout();
             // 
             // AddStudentBttn
@@ -62,21 +62,21 @@
             this.RemoveStudentBttn.UseVisualStyleBackColor = true;
             this.RemoveStudentBttn.Click += new System.EventHandler(this.RemoveStudentBttn_Click);
             // 
-            // chart1
+            // SpecialityHistogram
             // 
             chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            this.SpecialityHistogram.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(426, 30);
-            this.chart1.Name = "chart1";
+            this.SpecialityHistogram.Legends.Add(legend1);
+            this.SpecialityHistogram.Location = new System.Drawing.Point(426, 30);
+            this.SpecialityHistogram.Name = "SpecialityHistogram";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(362, 308);
-            this.chart1.TabIndex = 3;
-            this.chart1.Text = "chart1";
+            this.SpecialityHistogram.Series.Add(series1);
+            this.SpecialityHistogram.Size = new System.Drawing.Size(362, 308);
+            this.SpecialityHistogram.TabIndex = 3;
+            this.SpecialityHistogram.Text = "chart1";
             // 
             // StudentsListView
             // 
@@ -94,13 +94,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.StudentsListView);
-            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.SpecialityHistogram);
             this.Controls.Add(this.RemoveStudentBttn);
             this.Controls.Add(this.AddStudentBttn);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SpecialityHistogram)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -108,7 +108,7 @@
         #endregion
         private System.Windows.Forms.Button AddStudentBttn;
         private System.Windows.Forms.Button RemoveStudentBttn;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart SpecialityHistogram;
         private System.Windows.Forms.ListView StudentsListView;
     }
 }

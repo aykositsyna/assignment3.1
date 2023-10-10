@@ -47,7 +47,21 @@ namespace ViewWF
 
         private void Refresh()
         {
+            StudentsListView.Items.Clear();
+            StudentsListView_Render();
+            SpecialityHistogram.Series.Clear();
+            SpecialityHistogram_Render();
+        }
+
+        private void StudentsListView_Render()
+        {
 
         }
+
+        private void SpecialityHistogram_Render()
+        {
+
+        }
+
     }
 }
