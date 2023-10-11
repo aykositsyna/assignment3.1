@@ -20,10 +20,10 @@ namespace ViewWF
         {
             InitializeComponent();
 
-            // StudentsListView.Columns.Add("#");
-            // StudentsListView.Columns.Add("Students");
-            // StudentsListView.Columns.Add("Speciality");
-            // StudentsListView.Columns.Add("Group");
+            StudentsListView.Columns.Add("#");
+            StudentsListView.Columns.Add("Students");
+            StudentsListView.Columns.Add("Speciality");
+            StudentsListView.Columns.Add("Group");
             Refresh();
 
         }
@@ -35,12 +35,31 @@ namespace ViewWF
 
         private void AddStudentBttn_Click(object sender, EventArgs e)
         {
+            
+            AddNameTB.Visible = true;
+            
+            string name = AddNameTB.Text;
+            
+        
+            
+            
+            
 
+            Refresh();
         }
 
         private void RemoveStudentBttn_Click(object sender, EventArgs e)
         {
-            
+            if (StudentsListView.SelectedIndices.Count >= 1)
+            {
+                logic.RemoveStudent(StudentsListView.SelectedIndices[0]);
+                Refresh();
+            }
+            else
+            {
+                MessageBox.Show("Wrong index");
+            }
+
         }
 
         private void StudentsListView_SelectedIndexChanged(object sender, EventArgs e)
@@ -62,7 +81,7 @@ namespace ViewWF
             int i = 1;
             foreach(string student in students)
             {
-                string[] studentDetails = student.Split(' '); // Split each student string by spaces 0 - name; 1 - speciality; 2 - group
+                string[] studentDetails = student.Split('|'); // Split each student string by spaces 0 - name; 1 - speciality; 2 - group
                 ListViewItem studentItem = new ListViewItem(i.ToString());
 
                 foreach(string detail in studentDetails)
@@ -86,5 +105,6 @@ namespace ViewWF
             SpecialityHistogram.Series.Add(series);
         }
 
+      
     }
 }

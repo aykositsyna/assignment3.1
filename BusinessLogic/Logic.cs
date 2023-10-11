@@ -52,7 +52,7 @@ namespace BusinessLogic
             List<string> result = new List<string>();
             foreach (Student student in Students)
             {
-                string str = student.Name + "  " + student.Speciality + "  " + student.Group;
+                string str = student.Name + "|" + student.Speciality + "|" + student.Group;
                 result.Add(str);
             }
             return result;
