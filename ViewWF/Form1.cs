@@ -35,15 +35,8 @@ namespace ViewWF
 
         private void AddStudentBttn_Click(object sender, EventArgs e)
         {
-            
-            AddNameTB.Visible = true;
-            
-            string name = AddNameTB.Text;
-            
-        
-            
-            
-            
+            Studentform studentform = new Studentform();
+            studentform.Show();
 
             Refresh();
         }
@@ -57,7 +50,7 @@ namespace ViewWF
             }
             else
             {
-                MessageBox.Show("Wrong index");
+                MessageBox.Show("Wrong index :(");
             }
 
         }

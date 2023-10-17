@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.AddStudentBttn = new System.Windows.Forms.Button();
             this.RemoveStudentBttn = new System.Windows.Forms.Button();
             this.SpecialityHistogram = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -39,7 +39,6 @@
             this.NameColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SpecialityColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.GroupColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.AddNameTB = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.SpecialityHistogram)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,16 +69,16 @@
             // 
             // SpecialityHistogram
             // 
-            chartArea3.Name = "ChartArea1";
-            this.SpecialityHistogram.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.SpecialityHistogram.Legends.Add(legend3);
+            chartArea4.Name = "ChartArea1";
+            this.SpecialityHistogram.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.SpecialityHistogram.Legends.Add(legend4);
             this.SpecialityHistogram.Location = new System.Drawing.Point(426, 30);
             this.SpecialityHistogram.Name = "SpecialityHistogram";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.SpecialityHistogram.Series.Add(series3);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.SpecialityHistogram.Series.Add(series4);
             this.SpecialityHistogram.Size = new System.Drawing.Size(362, 308);
             this.SpecialityHistogram.TabIndex = 3;
             this.SpecialityHistogram.Text = "chart1";
@@ -116,22 +115,11 @@
             // 
             this.GroupColumn.Text = "Group";
             // 
-            // AddNameTB
-            // 
-            this.AddNameTB.Location = new System.Drawing.Point(482, 387);
-            this.AddNameTB.Multiline = true;
-            this.AddNameTB.Name = "AddNameTB";
-            this.AddNameTB.Size = new System.Drawing.Size(261, 51);
-            this.AddNameTB.TabIndex = 5;
-            this.AddNameTB.Text = "Enter student\'s name\r\n";
-            this.AddNameTB.Visible = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.AddNameTB);
             this.Controls.Add(this.StudentsListView);
             this.Controls.Add(this.SpecialityHistogram);
             this.Controls.Add(this.RemoveStudentBttn);
@@ -141,7 +129,6 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.SpecialityHistogram)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -154,7 +141,6 @@
         private System.Windows.Forms.ColumnHeader NameColumn;
         private System.Windows.Forms.ColumnHeader SpecialityColumn;
         private System.Windows.Forms.ColumnHeader GroupColumn;
-        private System.Windows.Forms.TextBox AddNameTB;
     }
 }
 
