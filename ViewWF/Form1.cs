@@ -14,16 +14,16 @@ namespace ViewWF
 {
     public partial class Form1 : Form
     {
-        Logic logic = new Logic();
+        private Logic logic = new Logic();
         
         public Form1()
         {
             InitializeComponent();
 
-            StudentsListView.Columns.Add("#");
-            StudentsListView.Columns.Add("Students");
-            StudentsListView.Columns.Add("Speciality");
-            StudentsListView.Columns.Add("Group");
+            //StudentsListView.Columns.Add("#");
+            //StudentsListView.Columns.Add("Students");
+            //StudentsListView.Columns.Add("Speciality");
+            //StudentsListView.Columns.Add("Group");
             Refresh();
 
         }
@@ -36,8 +36,13 @@ namespace ViewWF
         private void AddStudentBttn_Click(object sender, EventArgs e)
         {
             Studentform studentform = new Studentform();
+            studentform.DataAvailable += StudentformDataAvaliable;
             studentform.Show();
+        }
 
+        private void StudentformDataAvaliable(object sender, Studentform.DataEventArgs e)
+        {
+            logic.AddStudent(e.Name, e.Speciality, e.Group);
             Refresh();
         }
 
@@ -60,7 +65,7 @@ namespace ViewWF
 
         }
 
-        private void Refresh()
+        public void Refresh()
         {
             StudentsListView.Items.Clear();
             StudentsListView_Render();
@@ -96,8 +101,6 @@ namespace ViewWF
                 series.Points.AddXY(speciality.Key, speciality.Value);
             }
             SpecialityHistogram.Series.Add(series);
-        }
-
-      
+        }      
     }
 }
