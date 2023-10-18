@@ -97,7 +97,6 @@
             this.StudentsListView.TabIndex = 4;
             this.StudentsListView.UseCompatibleStateImageBehavior = false;
             this.StudentsListView.View = System.Windows.Forms.View.Details;
-            this.StudentsListView.SelectedIndexChanged += new System.EventHandler(this.StudentsListView_SelectedIndexChanged);
             // 
             // IDColumn
             // 
@@ -126,7 +125,6 @@
             this.Controls.Add(this.AddStudentBttn);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.SpecialityHistogram)).EndInit();
             this.ResumeLayout(false);
 

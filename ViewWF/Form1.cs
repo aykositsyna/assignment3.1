@@ -19,17 +19,7 @@ namespace ViewWF
         public Form1()
         {
             InitializeComponent();
-
-            //StudentsListView.Columns.Add("#");
-            //StudentsListView.Columns.Add("Students");
-            //StudentsListView.Columns.Add("Speciality");
-            //StudentsListView.Columns.Add("Group");
-            Refresh();
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
+            Render();
 
         }
 
@@ -43,7 +33,7 @@ namespace ViewWF
         private void StudentformDataAvaliable(object sender, Studentform.DataEventArgs e)
         {
             logic.AddStudent(e.Name, e.Speciality, e.Group);
-            Refresh();
+            Render();
         }
 
         private void RemoveStudentBttn_Click(object sender, EventArgs e)
@@ -51,7 +41,7 @@ namespace ViewWF
             if (StudentsListView.SelectedIndices.Count >= 1)
             {
                 logic.RemoveStudent(StudentsListView.SelectedIndices[0]);
-                Refresh();
+                Render();
             }
             else
             {
@@ -60,12 +50,7 @@ namespace ViewWF
 
         }
 
-        private void StudentsListView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        public void Refresh()
+        public void Render()
         {
             StudentsListView.Items.Clear();
             StudentsListView_Render();
