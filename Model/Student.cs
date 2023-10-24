@@ -9,8 +9,12 @@ namespace Model
     /// <summary>
     /// Student data
     /// </summary>
-    public class Student
+    public class Student : IDomainObject
     {
+        /// <summary>
+        /// students ID
+        /// </summary>
+        public int ID { get; set; }
         /// <summary>
         /// student's name
         /// </summary>
