@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataAccessLayer;
 using Model;
 
 namespace BusinessLogic
@@ -12,14 +13,15 @@ namespace BusinessLogic
     /// </summary>
     public class Logic
     {
+        public EntityRepository<Student> repository = new EntityRepository<Student>();
 
         public int StudentCount => Students.Count;
 
-        private List<Student> Students = new List<Student>()
-        {
-            new Student() {Name = "Ivan", Speciality = "History", Group = "AB22-02"},
-            new Student() {Name = "Egor", Speciality = "SKD", Group = "AB10-01"}
-        };
+        //private List<Student> Students = new List<Student>()
+        //{
+        //    new Student() {Name = "Ivan", Speciality = "History", Group = "AB22-02"},
+        //    new Student() {Name = "Egor", Speciality = "SKD", Group = "AB10-01"}
+        //};
 
 
         /// <summary>
