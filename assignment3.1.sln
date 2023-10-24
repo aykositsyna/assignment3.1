@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewWF", "ViewWF\ViewWF.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewConsole", "ViewConsole\ViewConsole.csproj", "{B42FD90F-28FF-42B8-BBE8-6F6BB1A05CF1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{DA183C6A-9551-44D2-BAEB-3B9BA2BF8F67}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{B42FD90F-28FF-42B8-BBE8-6F6BB1A05CF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B42FD90F-28FF-42B8-BBE8-6F6BB1A05CF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B42FD90F-28FF-42B8-BBE8-6F6BB1A05CF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA183C6A-9551-44D2-BAEB-3B9BA2BF8F67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA183C6A-9551-44D2-BAEB-3B9BA2BF8F67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA183C6A-9551-44D2-BAEB-3B9BA2BF8F67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA183C6A-9551-44D2-BAEB-3B9BA2BF8F67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
