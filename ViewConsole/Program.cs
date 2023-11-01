@@ -13,7 +13,11 @@ namespace ViewConsole
         {
             Logic logic = new Logic();
 
+            logic.AddStudent("a", "b", "c");
+                
 
+            Console.WriteLine("test");
+            Console.ReadKey();
 
             Console.WriteLine();
 
@@ -59,19 +63,16 @@ namespace ViewConsole
 
         private static void PrintStudents(Logic logic)
         {
-            int i = 1;
             Console.WriteLine("List of students: \n");
             foreach (string str in logic.GetAllStudents())
             {
-                Console.Write(i + " ");
                 Console.WriteLine(str);
-                i ++;
             }
         }
 
         private static void RemoveStudent(Logic logic)
         {
-            Console.WriteLine("\nEnter index of student you want to delete");
+            Console.WriteLine("\nEnter ID of student you want to delete");
 
             while (true)
             {
@@ -79,14 +80,9 @@ namespace ViewConsole
                 string value = Console.ReadLine();
                 if (int.TryParse(value, out var number))
                 {
-                    int index = number;
-                    if (index > logic.StudentCount)
+                    int ID = number;
                     {
-                        Console.WriteLine("Index not found");
-                    }
-                    else
-                    {
-                        logic.RemoveStudent(index - 1);
+                        logic.RemoveStudent(ID);
                         break;
                     }
                 }

@@ -24,13 +24,13 @@ namespace BusinessLogic
         };
 
 
-    /// <summary>
-    /// adding new student
-    /// </summary>
-    /// <param name="name"></param>
-    /// <param name="speciality"></param>
-    /// <param name="group"></param>
-    public void AddStudent(string name, string speciality, string group)
+        /// <summary>
+        /// adding new student
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="speciality"></param>
+        /// <param name="group"></param>
+        public void AddStudent(string name, string speciality, string group)
         {
             Student student = new Student() { Name = name, Speciality = speciality, Group = group};
             repository.Create(student);
@@ -40,9 +40,9 @@ namespace BusinessLogic
         /// removing student
         /// </summary>
         /// <param name="index"></param>
-        public void RemoveStudent(int index)
+        public void RemoveStudent(int ID)
         {
-            repository.Delete(index);
+            repository.Delete(ID);
         }
 
         /// <summary>
