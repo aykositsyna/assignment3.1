@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,12 +7,10 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    internal interface IRepository<T> : IDisposable where T : class
+    internal interface IRepository<T> where T : class, IDomainObject, new()
     {
         IEnumerable<T> GetStudentsList();
-        T GetStudent(int id);
         void Create(T student);
-        void Update(T student);
-        void Delete(T student);
+        void Delete(int id);
     }
 }
