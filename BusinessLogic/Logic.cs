@@ -15,13 +15,13 @@ namespace BusinessLogic
     {
         public EntityFrameworkRepository<Student> repository = new EntityFrameworkRepository<Student>(new Context());
 
-        public int StudentCount => Students.Count;
+        //public int StudentCount => Students.Count;
 
-        private List<Student> Students = new List<Student>()
-        {
-            new Student() { Name = "Ivan", Speciality = "History", Group = "AB22-02", ID = 111},
-            new Student() { Name = "Egor", Speciality = "SKD", Group = "AB10-01", ID = 112}
-        };
+        //private List<Student> Students = new List<Student>()
+        //{
+        //    new Student() { Name = "Ivan", Speciality = "History", Group = "AB22-02", ID = 111},
+        //    new Student() { Name = "Egor", Speciality = "SKD", Group = "AB10-01", ID = 112}
+        //};
 
 
         /// <summary>
@@ -72,7 +72,7 @@ namespace BusinessLogic
         public Dictionary<string, int> GetHistogram()
         {
             Dictionary<string, int> res = new Dictionary<string, int>();
-            foreach (Student student in Students)
+            foreach (Student student in repository.GetStudentsList())
             {
                 if (res.ContainsKey(student.Speciality))
                 {
