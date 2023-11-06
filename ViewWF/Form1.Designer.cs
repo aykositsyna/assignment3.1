@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.ColumnHeader IDColumn;
             this.AddStudentBttn = new System.Windows.Forms.Button();
             this.RemoveStudentBttn = new System.Windows.Forms.Button();
             this.SpecialityHistogram = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.StudentsListView = new System.Windows.Forms.ListView();
-            this.IDColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.NameColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SpecialityColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.GroupColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            IDColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.SpecialityHistogram)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,16 +70,16 @@
             // 
             // SpecialityHistogram
             // 
-            chartArea4.Name = "ChartArea1";
-            this.SpecialityHistogram.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.SpecialityHistogram.Legends.Add(legend4);
+            chartArea1.Name = "ChartArea1";
+            this.SpecialityHistogram.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.SpecialityHistogram.Legends.Add(legend1);
             this.SpecialityHistogram.Location = new System.Drawing.Point(426, 30);
             this.SpecialityHistogram.Name = "SpecialityHistogram";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.SpecialityHistogram.Series.Add(series4);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.SpecialityHistogram.Series.Add(series1);
             this.SpecialityHistogram.Size = new System.Drawing.Size(362, 308);
             this.SpecialityHistogram.TabIndex = 3;
             this.SpecialityHistogram.Text = "chart1";
@@ -86,7 +87,7 @@
             // StudentsListView
             // 
             this.StudentsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.IDColumn,
+            IDColumn,
             this.NameColumn,
             this.SpecialityColumn,
             this.GroupColumn});
@@ -100,7 +101,7 @@
             // 
             // IDColumn
             // 
-            this.IDColumn.Text = "#";
+            IDColumn.Text = "ID";
             // 
             // NameColumn
             // 
@@ -135,7 +136,6 @@
         private System.Windows.Forms.Button RemoveStudentBttn;
         private System.Windows.Forms.DataVisualization.Charting.Chart SpecialityHistogram;
         private System.Windows.Forms.ListView StudentsListView;
-        private System.Windows.Forms.ColumnHeader IDColumn;
         private System.Windows.Forms.ColumnHeader NameColumn;
         private System.Windows.Forms.ColumnHeader SpecialityColumn;
         private System.Windows.Forms.ColumnHeader GroupColumn;
