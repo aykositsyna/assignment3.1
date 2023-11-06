@@ -50,7 +50,7 @@ namespace BusinessLogic
             {
                 if (!string.IsNullOrEmpty(student.Name) && !string.IsNullOrEmpty(student.Speciality) && !string.IsNullOrEmpty(student.Group))
                 {
-                    string str = student.Name + "|" + student.Speciality + "|" + student.Group + "|" + student.ID;
+                    string str = student.ID + "|" + student.Name + "|" + student.Speciality + "|" + student.Group;
                     result.Add(str);
                 }
 
