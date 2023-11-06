@@ -38,9 +38,13 @@ namespace ViewWF
 
         private void RemoveStudentBttn_Click(object sender, EventArgs e)
         {
-            if (StudentsListView.SelectedIndices.Count >= 1)
+            if (StudentsListView.SelectedItems.Count > 0)
             {
-                logic.RemoveStudent(StudentsListView.SelectedIndices[0]);
+                ListViewItem selectedStudent = StudentsListView.SelectedItems[0];
+                if(Int32.TryParse(selectedStudent.SubItems[0].Text, out int studentId))
+                {
+                    logic.RemoveStudent(studentId);
+                }
                 Render();
             }
             else
@@ -61,18 +65,16 @@ namespace ViewWF
         private void StudentsListView_Render()
         {
             List<string> students = logic.GetAllStudents();
-            int i = 1;
             foreach(string student in students)
             {
                 string[] studentDetails = student.Split('|'); // Split each student string by spaces 0 - name; 1 - speciality; 2 - group
-                ListViewItem studentItem = new ListViewItem(i.ToString());
+                ListViewItem studentItem = new ListViewItem(studentDetails[0]);
 
-                foreach(string detail in studentDetails)
+                for ( int i = 1; i < studentDetails.Length; i++ )
                 {
-                    studentItem.SubItems.Add(detail);
+                    studentItem.SubItems.Add(studentDetails[i]);
                 }
                 StudentsListView.Items.Add(studentItem);
-                i++;
             }
         }
 
