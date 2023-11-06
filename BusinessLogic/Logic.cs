@@ -16,6 +16,15 @@ namespace BusinessLogic
         public EntityFrameworkRepository<Student> repository = new EntityFrameworkRepository<Student>(new Context());
 
         //public int StudentCount => Students.Count;
+<<<<<<< HEAD
+=======
+
+        //private List<Student> Students = new List<Student>()
+        //{
+        //    new Student() { Name = "Ivan", Speciality = "History", Group = "AB22-02", ID = 111},
+        //    new Student() { Name = "Egor", Speciality = "SKD", Group = "AB10-01", ID = 112}
+        //};
+>>>>>>> 87352703c3c1f6cb8ea4eec1f6516a29a481ecbc
 
 
         /// <summary>
