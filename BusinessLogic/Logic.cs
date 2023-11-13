@@ -13,7 +13,8 @@ namespace BusinessLogic
     /// </summary>
     public class Logic
     {
-        public EntityFrameworkRepository<Student> repository = new EntityFrameworkRepository<Student>(new Context());
+        //public EntityFrameworkRepository<Student> repository = new EntityFrameworkRepository<Student>(new Context());
+        public IRepository<Student> repository = new DapperRepository();
 
         //public int StudentCount => Students.Count;
 
