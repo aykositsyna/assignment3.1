@@ -9,13 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLogic;
 using System.Windows.Forms.DataVisualization.Charting;
+using Ninject;
+using DataAccessLayer;
 
 namespace ViewWF
 {
     public partial class Form1 : Form
     {
-        private Logic logic = new Logic();
-        
+        static IKernel ninjectKernel = new StandardKernel(new SimpleConfigModule());
+        Logic logic = ninjectKernel.Get<Logic>();
+
         public Form1()
         {
             InitializeComponent();
