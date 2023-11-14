@@ -13,13 +13,13 @@ namespace ViewConsole
         {
             Logic logic = new Logic();
 
-            logic.AddStudent("a", "b", "c");
+            //logic.AddStudent("a", "b", "c");
 
 
-            Console.WriteLine("test");
-            Console.ReadKey();
+            //Console.WriteLine("test");
+            //Console.ReadKey();
 
-            Console.WriteLine();
+            //Console.WriteLine();
 
 
             while (true)
