@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BusinessLogic;
+using DataAccessLayer;
+using Ninject;
+
 namespace ViewConsole
 {
     internal class Program
@@ -11,7 +14,8 @@ namespace ViewConsole
 
         static void Main(string[] args)
         {
-            Logic logic = new Logic();
+            IKernel ninjectKernel = new StandardKernel(new SimpleConfigModule());
+            Logic logic = ninjectKernel.Get<Logic>();
 
             //logic.AddStudent("a", "b", "c");
 
