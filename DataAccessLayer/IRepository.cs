@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    internal interface IRepository<T> where T : class, IDomainObject, new()
+    public interface IRepository<T> where T : class, IDomainObject, new()
     {
         IEnumerable<T> GetStudentsList();
         void Create(T student);
