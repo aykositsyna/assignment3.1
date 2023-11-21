@@ -16,8 +16,10 @@ namespace BusinessLogic
         //IRepository<Student> repository = new EntityFrameworkRepository<Student>(new Context());
         //public IRepository<Student> repository = new DapperRepository();
 
-        IRepository<Student> repository;
-        public Logic(IRepository<Student> _repository) => repository = _repository;
+       
+
+        private IRepository<Student> repository;
+        public Logic (IRepository<Student> _repository) => repository = _repository;
 
 
         //public int StudentCount => Students.Count;
